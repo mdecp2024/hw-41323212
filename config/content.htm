@@ -46,6 +46,32 @@
 <p></p>
 <p>1.  已知可以用 Python 程式<a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/5e6eda7a004c15fa7262b9a80bfa4af6/raw/c2225ac22f32ee8485a630b42cf3f4d8567bb661/up_to_down_pyramid.py">由上往下列印三角形 *</a>, 或<a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/5e6eda7a004c15fa7262b9a80bfa4af6/raw/56793c72d4495d564e3cc6214ed5fb68dbd2b21d/left_to_right_pyramid.py">由左往右列印三角形 *</a>, 請將此程式延伸到可以在 10x10 的字元區域中, 以 "*" 字元列印出圓型區域. 完成後請將程式碼存入個人 Gist 後, 直接在個人作業網站中的 Brython 頁面中執行. (提示: ?src=gist_script_URL)</p>
 <p>第1題:<a href="/get_page/Brython?src=https://gist.githubusercontent.com/41323212/14df989a0e246acd2d8091ee29aca344/raw/16f8bab3b0dd5c3c6a7cba2764d2fe7b7ddd69fe/hw11.py">圓形區域</a></p>
+<div class="line number1 index0 alt2"><code class="py keyword"></code></div>
+<div class="line number1 index0 alt2">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import math
+
+# 定義10x10的大小
+size = 10
+# 圓心位置 (5, 5)
+center = (5, 5)
+# 圓的半徑
+radius = 4
+
+# 遍歷每個位置並計算是否在圓內
+for y in range(size):
+    row = ''
+    for x in range(size):
+        # 計算 (x, y) 與圓心 (center) 的距離
+        distance = math.sqrt((x - center[0])**2 + (y - center[1])**2)
+        
+        # 如果距離接近圓的半徑，則列印 *
+        if abs(distance - radius) &lt; 1.0:  # 可以調整這個容差值來控制圓的精確度
+            row += '*'
+        else:
+            row += ' '
+    print(row)
+</pre>
+<code class="py keyword"><br/></code></div>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Hx9ETzMT6Ss" width="560"></iframe></p>
 <p></p>
 <p>2. 已知可以在網頁中利用 Brython 繪製方格與塗色, 如下連結, 請設法修改此一程式, 直接將程式存入個人的 Gist, 並利用黑色方塊圍出一個圓形區域.</p>
