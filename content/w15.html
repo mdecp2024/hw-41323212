@@ -142,7 +142,19 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">w14_hw << <a href='w14_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2<br /><h1>w15</h1>
-<p><a href="https://mdecp2024.github.io/hw-41323212/content/Brython.html?src=https://gist.githubusercontent.com/41323212/14df989a0e246acd2d8091ee29aca344/raw/589ff4bf842b19339e2aa2aa459f406318eed573/1%25E5%258A%25A0%25E5%2588%25B0100">作業</a></p><br />w14_hw << <a href='w14_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
+<p><a href="https://mdecp2024.github.io/hw-41323212/content/Brython.html?src=https://gist.githubusercontent.com/41323212/14df989a0e246acd2d8091ee29aca344/raw/589ff4bf842b19339e2aa2aa459f406318eed573/1%25E5%258A%25A0%25E5%2588%25B0100">作業</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># sum 初始值設為 0
+sum = 0
+
+def addto(init, upto):
+    global sum  # 使用全域變數 sum
+    # 利用 for 重複迴圈與變數加法進行累加
+    for i in range(init, upto+1):
+        sum = sum + i
+    print("從" + str(init) + "累加到" + str(upto) + "=" + str(sum))
+
+addto(1, 100)</pre>
+<p></p><br />w14_hw << <a href='w14_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
         
     <!-- footer -->
       <div class="container">
