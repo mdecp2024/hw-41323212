@@ -642,13 +642,24 @@ circles = [
 # 呼叫畫圓函式
 draw_circles(circles)</pre>
 <p></p><h3>w15</h3>
-<p><a href="https://mdecp2024.github.io/hw-41323212/content/Brython.html?src=https://gist.githubusercontent.com/41323212/14df989a0e246acd2d8091ee29aca344/raw/d632eebde0e6d543ed247ee1172f11804269769d/1%25E5%258A%25A0%25E5%2588%25B0100(2)">作業(1)</a></p>
+<p><a href="https://mdecp2024.github.io/hw-41323212/content/Brython.html?src=https://gist.githubusercontent.com/41323212/14df989a0e246acd2d8091ee29aca344/raw/d632eebde0e6d543ed247ee1172f11804269769d/1%25E5%258A%25A0%25E5%2588%25B0100(2)">從1累加到100</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">total = 0
 for i in range(1, 101):  # range(1, 101) 代表從 1 到 100
     total += i
 print(total)</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323212/content/Brython.html?src=https://gist.githubusercontent.com/41323212/14df989a0e246acd2d8091ee29aca344/raw/13297c7b5b7692ceb51da172160c661d16966c7e/1+100(%25E6%2594%25B9)">addite(1,100)更改</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義 addite 函數
+def addite(start, end):
+    sum = 0
+    for i in range(start, end + 1):  # 使用 start 到 end (包括 end)
+        sum += i
+    return sum
+ 
+# 使用 addite 函數來計算從 1 到 100 的總和
+result = addite(1, 100)
+print("累加結果是:", result)</pre>
 <p></p>
-<p><a href="https://mdecp2024.github.io/hw-41323212/content/Brython.html?src=https://gist.githubusercontent.com/41323212/14df989a0e246acd2d8091ee29aca344/raw/641174e7fcdf7ad807b5fd734321e3c54d6f0390/%25E4%25BD%259C%25E6%25A5%25AD(2)">作業(2)</a></p>
+<p><a href="https://mdecp2024.github.io/hw-41323212/content/Brython.html?src=https://gist.githubusercontent.com/41323212/14df989a0e246acd2d8091ee29aca344/raw/641174e7fcdf7ad807b5fd734321e3c54d6f0390/%25E4%25BD%259C%25E6%25A5%25AD(2)">add-only-even</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義一個 addto 函數來計算總和
 def addto(start, end):
     total = 0
@@ -669,7 +680,26 @@ sum = addto(start, end)
 
 print(f"{num1} 到 {num2} 之間所有數字的總和是: {sum}")
 </pre>
-<p></p>
+<p><a href="https://mdecp2024.github.io/hw-41323212/content/Brython.html?src=https://gist.githubusercontent.com/41323212/14df989a0e246acd2d8091ee29aca344/raw/08c39d435cb5f6c9e491f5366319c964cb65fd80/%25E5%258E%25BB%25E6%258E%25898">add_avoid_8</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義 add_only_even 函式
+def add_only_even(start, end):
+    sum = 0
+    for i in range(start, end + 1):  # 遍歷從 start 到 end (包括 end)
+        if i % 2 == 0:  # 檢查是否為偶數
+            sum += i
+    return sum
+ 
+# 定義 add_avoid_8 函式
+def add_avoid_8(start, end):
+    sum = 0
+    for i in range(start, end + 1):  # 遍歷從 start 到 end (包括 end)
+        if '8' not in str(i):  # 檢查數字中是否不包含"8"
+            sum += i
+    return sum
+ 
+# 測試 add_only_even 函式
+result = add_only_even(1, 100)
+print("1 到 100 的偶數累加結果是:", result)</pre>
 <p><a href="https://mdecp2024.github.io/hw-41323212/content/Brython.html?src=https://gist.githubusercontent.com/41323212/14df989a0e246acd2d8091ee29aca344/raw/d632eebde0e6d543ed247ee1172f11804269769d/1%25E5%258A%25A0%25E5%2588%25B0100(2)"></a></p><h1>HW 2</h1>
 <h4>主題: Python 的數列、判斷式與重複迴圈 (20%)<span style="background-color: #ffff99;"><br/></span></h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 2 and Part 3</p>
