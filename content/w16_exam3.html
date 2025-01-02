@@ -142,7 +142,110 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">HW 4 Exam << <a href='HW 4 Exam.html'>Previous</a> <a href='Final Report.html'>Next</a> >> Final Report<br /><h1>w16_exam3</h1>
-<br />HW 4 Exam << <a href='HW 4 Exam.html'>Previous</a> <a href='Final Report.html'>Next</a> >> Final Report</div>
+<p><a href="https://mdecp2024.github.io/hw-41323212/content/Brython.html?src=https://gist.githubusercontent.com/41323212/14df989a0e246acd2d8091ee29aca344/raw/eec62e1dbbfb200638b8e5662928e101d2a366dd/w16_exam3">w16_exam3</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+ 
+# 利用 html 建立 canvas 超文件物件
+canvas = html.CANVAS(width=300, height=300)# 設定迷宮畫布大小
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+ 
+# 取得 canvas 的繪圖上下文
+ctx = canvas.getContext("2d")
+ 
+# 標示左上方點座標 (32, 12)
+ctx.font = "12px Arial"
+ctx.fillStyle = "red"
+ctx.fillText("(32, 12)", 35, 50)
+ 
+# 定義黑色線條的屬性
+ctx.strokeStyle = "black"
+ctx.lineWidth = 2
+ 
+# 開始繪製迷宮 (座標偏移以 (32, 12) 為起點)
+offset_x = 32
+offset_y = 12
+ 
+# 繪製迷宮線條
+ctx.beginPath()
+ctx.moveTo(offset_x + 0, offset_y + 0) 
+ctx.lineTo(offset_x + 86, offset_y + 0)
+ctx.moveTo(offset_x + 0, offset_y + 0)
+ctx.lineTo(offset_x + 0, offset_y + 200)
+ctx.moveTo(offset_x + 120, offset_y + 0)
+ctx.lineTo(offset_x + 200, offset_y + 0)
+ctx.moveTo(offset_x + 200, offset_y + 0)
+ctx.lineTo(offset_x + 200, offset_y + 200)
+ctx.lineTo(offset_x + 120, offset_y + 200)
+ctx.moveTo(offset_x + 200, offset_y + 200)
+ctx.moveTo(offset_x + 0, offset_y + 200) 
+ctx.lineTo(offset_x + 86, offset_y + 200)
+ctx.moveTo(offset_x + 86, offset_y + 157) 
+ctx.lineTo(offset_x + 86, offset_y + 200)
+ctx.moveTo(offset_x + 86, offset_y + 157) 
+ctx.lineTo(offset_x + 126, offset_y + 157)
+ctx.moveTo(offset_x + 160, offset_y + 120) 
+ctx.lineTo(offset_x + 160, offset_y + 200)
+ctx.moveTo(offset_x + 160, offset_y + 120) 
+ctx.lineTo(offset_x + 50, offset_y + 120)
+ctx.moveTo(offset_x + 50, offset_y + 120) 
+ctx.lineTo(offset_x + 50, offset_y + 163)
+ctx.moveTo(offset_x + 126, offset_y + 80) 
+ctx.lineTo(offset_x + 126, offset_y + 120)
+ctx.moveTo(offset_x + 0, offset_y + 80) 
+ctx.lineTo(offset_x + 86, offset_y + 80)
+ctx.moveTo(offset_x + 86, offset_y + 40) 
+ctx.lineTo(offset_x + 86, offset_y + 80)
+ctx.moveTo(offset_x + 40, offset_y + 40) 
+ctx.lineTo(offset_x + 160, offset_y + 40)
+ctx.moveTo(offset_x + 160, offset_y + 40) 
+ctx.lineTo(offset_x + 160, offset_y + 83)
+ctx.stroke()
+ 
+# 定義紅色線條的屬性
+ctx.strokeStyle = "red"
+ctx.lineWidth = 2
+ 
+# 繪製路徑線條
+ctx.beginPath()
+ctx.moveTo(offset_x + 100, offset_y + 0) 
+ctx.lineTo(offset_x + 100, offset_y + 20)
+ctx.moveTo(offset_x + 100, offset_y + 20) 
+ctx.lineTo(offset_x + 180, offset_y + 20)
+ctx.moveTo(offset_x + 180, offset_y + 20) 
+ctx.lineTo(offset_x + 180, offset_y + 100)
+ctx.moveTo(offset_x + 180, offset_y + 100) 
+ctx.lineTo(offset_x + 140, offset_y + 100)
+ctx.moveTo(offset_x + 140, offset_y + 100) 
+ctx.lineTo(offset_x + 140, offset_y + 60)
+ctx.moveTo(offset_x + 140, offset_y + 60) 
+ctx.lineTo(offset_x + 110, offset_y + 60)
+ctx.moveTo(offset_x + 110, offset_y + 60) 
+ctx.lineTo(offset_x + 110, offset_y + 100)
+ctx.moveTo(offset_x + 110, offset_y + 100) 
+ctx.lineTo(offset_x + 30, offset_y + 100)
+ctx.moveTo(offset_x + 30, offset_y + 100) 
+ctx.lineTo(offset_x + 30, offset_y + 180)
+ctx.moveTo(offset_x + 30, offset_y + 180) 
+ctx.lineTo(offset_x + 70, offset_y + 180)
+ctx.moveTo(offset_x + 70, offset_y + 180) 
+ctx.lineTo(offset_x + 70, offset_y + 140)
+ctx.moveTo(offset_x + 70, offset_y + 140) 
+ctx.lineTo(offset_x + 140, offset_y + 140)
+ctx.moveTo(offset_x + 140, offset_y + 140) 
+ctx.lineTo(offset_x + 140, offset_y + 180)
+ctx.moveTo(offset_x + 140, offset_y + 180) 
+ctx.lineTo(offset_x + 110, offset_y + 180)
+ctx.moveTo(offset_x + 110, offset_y + 180) 
+ctx.lineTo(offset_x + 110, offset_y + 200)
+ctx.stroke()
+
+具有快顯功能表
+
+
+具有快顯功能表</pre>
+<p></p><br />HW 4 Exam << <a href='HW 4 Exam.html'>Previous</a> <a href='Final Report.html'>Next</a> >> Final Report</div>
         
     <!-- footer -->
       <div class="container">
