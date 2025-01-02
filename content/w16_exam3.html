@@ -141,75 +141,8 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w13_hw << <a href='w13_hw.html'>Previous</a> <a href='w15.html'>Next</a> >> w15<br /><h1>w14_hw</h1>
-<p><a href="https://mdecp2024.github.io/hw-41323212/content/Brython.html?src=https://gist.githubusercontent.com/41323212/14df989a0e246acd2d8091ee29aca344/raw/4f34b6ac794e59ffea0a4c0fa7230f917c86d452/%25E5%259C%2593%25E4%25BA%25A4%25E9%258C%25AF">圓</a></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import math
-import random
-from browser import document as doc, html
-
-# 定義一個函式來初始化畫布
-def initialize_canvas(canvas_width=400, canvas_height=400, id="brython_div1"):
-    # 創建 canvas 並設置寬度與高度
-    canvas = html.CANVAS(width=canvas_width, height=canvas_height)
-    brython_div = doc[id]
-    brython_div &lt;= canvas
-
-    # 獲取 canvas 的 2D 上下文
-    ctx = canvas.getContext("2d")
-
-    return canvas, ctx
-
-# 定義一個隨機顏色生成函式
-def random_color_generator():
-    r = random.randint(0, 255)
-    g = random.randint(0, 255)
-    b = random.randint(0, 255)
-    return f"rgb({r}, {g}, {b})"
-
-# 判斷點 (px, py) 是否在圓內
-def is_point_in_circle(px, py, cx, cy, r):
-    return (px - cx) ** 2 + (py - cy) ** 2 &lt;= r ** 2
-
-# 使用者設定多個圓心座標和半徑，並進行掃描線填充
-def draw_circles(circles):
-    # 初始化畫布
-    canvas, ctx = initialize_canvas(400, 400)
-
-    # 清除畫布
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-
-    # 顏色區域存儲
-    color_dict = {}
-
-    # 使用掃描線方法填充區域
-    for py in range(0, canvas.height):
-        for px in range(0, canvas.width):
-            # 檢查當前點在哪些圓內
-            inside_circles = [i for i, (cx, cy, r) in enumerate(circles) if is_point_in_circle(px, py, cx, cy, r)]
-
-            # 決定顏色，根據所屬圓的組合
-            if inside_circles:
-                key = tuple(sorted(inside_circles))
-                if key not in color_dict:
-                    color_dict[key] = random_color_generator()
-                current_color = color_dict[key]
-            else:
-                current_color = "white"  # 背景色白色
-
-            # 填充顏色
-            ctx.fillStyle = current_color
-            ctx.fillRect(px, py, 1, 1)  # 填充一個像素
-
-# 定義多個圓的圓心和半徑
-circles = [
-    (150, 200, 100),  # 圓1
-    (250, 200, 100),  # 圓2
-    (200, 100, 100)   # 圓3
-]
-
-# 呼叫畫圓函式
-draw_circles(circles)</pre>
-<p></p><br />w13_hw << <a href='w13_hw.html'>Previous</a> <a href='w15.html'>Next</a> >> w15</div>
+    <div id="tipue_search_content">HW 4 Exam << <a href='HW 4 Exam.html'>Previous</a> <a href='Final Report.html'>Next</a> >> Final Report<br /><h1>w16_exam3</h1>
+<br />HW 4 Exam << <a href='HW 4 Exam.html'>Previous</a> <a href='Final Report.html'>Next</a> >> Final Report</div>
         
     <!-- footer -->
       <div class="container">
