@@ -831,7 +831,79 @@ b = print(a, a, a,sep='*')</span></span></span></span></span></span><span></span
 <h3>w7</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/lnzycCBhAP0" width="560"></iframe></p>
 <h3>w16_exam2</h3>
-<h1>HW 4</h1>
+<h4><a href="https://mdecp2024.github.io/hw-41323212/content/Brython.html?src=https://gist.githubusercontent.com/41323212/14df989a0e246acd2d8091ee29aca344/raw/14723b9f2280bbe6ba5b80047d2d1fd41f87f361/w16_exam2">w16_exam2</a></h4>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+
+
+
+# 利用 html 建立 canvas 超文件物件
+canvas = html.CANVAS(width=300, height=300)# 設定迷宮畫布大小
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+
+
+# 取得 canvas 的繪圖上下文
+ctx = canvas.getContext("2d")
+
+
+
+# 標示左上方點座標 (32, 12)
+ctx.font = "12px Arial"
+ctx.fillStyle = "red"
+ctx.fillText("(32, 12)", 35, 50)
+
+
+
+# 定義藍色線條的屬性
+ctx.strokeStyle = "blue"
+ctx.lineWidth = 2
+
+
+
+# 開始繪製迷宮 (座標偏移以 (32, 12) 為起點)
+offset_x = 32
+offset_y = 12
+
+
+
+# 繪製迷宮線條
+ctx.beginPath()
+ctx.moveTo(offset_x + 0, offset_y + 0) 
+ctx.lineTo(offset_x + 86, offset_y + 0)
+ctx.moveTo(offset_x + 0, offset_y + 0)
+ctx.lineTo(offset_x + 0, offset_y + 200)
+ctx.moveTo(offset_x + 120, offset_y + 0)
+ctx.lineTo(offset_x + 200, offset_y + 0)
+ctx.moveTo(offset_x + 200, offset_y + 0)
+ctx.lineTo(offset_x + 200, offset_y + 200)
+ctx.lineTo(offset_x + 120, offset_y + 200)
+ctx.moveTo(offset_x + 200, offset_y + 200)
+ctx.moveTo(offset_x + 0, offset_y + 200) 
+ctx.lineTo(offset_x + 86, offset_y + 200)
+ctx.moveTo(offset_x + 86, offset_y + 157) 
+ctx.lineTo(offset_x + 86, offset_y + 200)
+ctx.moveTo(offset_x + 86, offset_y + 157) 
+ctx.lineTo(offset_x + 126, offset_y + 157)
+ctx.moveTo(offset_x + 160, offset_y + 120) 
+ctx.lineTo(offset_x + 160, offset_y + 200)
+ctx.moveTo(offset_x + 160, offset_y + 120) 
+ctx.lineTo(offset_x + 50, offset_y + 120)
+ctx.moveTo(offset_x + 50, offset_y + 120) 
+ctx.lineTo(offset_x + 50, offset_y + 163)
+ctx.moveTo(offset_x + 126, offset_y + 80) 
+ctx.lineTo(offset_x + 126, offset_y + 120)
+ctx.moveTo(offset_x + 0, offset_y + 80) 
+ctx.lineTo(offset_x + 86, offset_y + 80)
+ctx.moveTo(offset_x + 86, offset_y + 40) 
+ctx.lineTo(offset_x + 86, offset_y + 80)
+ctx.moveTo(offset_x + 40, offset_y + 40) 
+ctx.lineTo(offset_x + 160, offset_y + 40)
+ctx.moveTo(offset_x + 160, offset_y + 40) 
+ctx.lineTo(offset_x + 160, offset_y + 83)
+ctx.stroke()</pre>
+<p></p><h1>HW 4</h1>
 <h4>主題: 利用 Python 控制機電模擬系統 (20%)</h4>
 <p style="padding-left: 30px;">利用 <a href="https://solvespace.com/">https://solvespace.com/</a> 建立機械系統零組件</p>
 <p style="padding-left: 30px;">利用 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 建立機電模擬系統</p>
